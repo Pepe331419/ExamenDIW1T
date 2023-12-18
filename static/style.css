@@ -1,0 +1,185 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+dialog#deleteDialog div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  color: #002858;
+}
+dialog#deleteDialog div h2 {
+  margin-bottom: 2.5rem;
+}
+dialog#deleteDialog div input[type=submit] {
+  background-color: #ffc836;
+  color: #002858;
+  margin-top: 1rem;
+}
+
+dialog#insertDialog {
+  padding: 0.25rem 0;
+}
+dialog#insertDialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #002858;
+}
+dialog#insertDialog form div.divLabelInput {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 70%;
+  padding: 0.5rem 0;
+  margin: 0 5rem;
+}
+dialog#insertDialog form div.divLabelInput:has(input:focus) {
+  background-color: #ffc836;
+}
+dialog#insertDialog form div.divLabelInput:has(select:focus) {
+  background-color: #ffc836;
+}
+dialog#insertDialog form div.divLabelInput label {
+  text-align: right;
+  width: 4rem;
+  padding-left: 4rem;
+}
+dialog#insertDialog form div.divLabelInput input[type=date] {
+  width: initial;
+  flex: none;
+}
+dialog#insertDialog form div.divLabelInput select {
+  flex: none;
+  width: initial;
+}
+dialog#insertDialog form div.divSubmit {
+  padding: 1rem 0 0.5rem 0;
+  gap: 0.5rem;
+}
+dialog#insertDialog form div.divSubmit input[type=submit] {
+  background-color: #ffc836;
+  color: #002858;
+}
+dialog#insertDialog form div.divSubmit * {
+  padding: 0.1rem 0.35rem;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 13rem;
+  background-color: #002858;
+}
+aside div#logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+}
+aside div#logoContainer img {
+  margin: 0;
+  padding: 0;
+  width: 11rem;
+}
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #FFFFFF;
+}
+aside ul li {
+  margin: 0;
+  padding: 1.5rem 0;
+}
+aside ul li:hover {
+  background-color: #ffc836;
+  color: #002858;
+}
+aside ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+aside ul li div#separator {
+  height: 2px;
+  background-color: #FFFFFF;
+}
+aside ul li:has(div) {
+  padding: 0;
+}
+
+html {
+  background-color: rgba(0, 40, 88, 0.6666666667);
+}
+
+main {
+  margin-left: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main h1 {
+  font-size: 4rem;
+  color: #ffc836;
+}
+
+footer {
+  text-align: center;
+  margin-left: 13rem;
+  padding-top: 2rem;
+  color: #ffc836;
+}
+
+table {
+  border-collapse: collapse;
+  border: solid 6px #ffc836;
+}
+table * td,
+table th {
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+}
+table thead {
+  background-color: #ffc836;
+  color: #002858;
+}
+table tbody tr {
+  color: #ffc836;
+}
+table tbody tr td {
+  border: solid 2px #ffc836;
+}
+table tbody tr td div.pill {
+  background-color: #ffc836;
+  color: #002858;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 12px;
+  padding: 0.25rem 0.5rem;
+}
+table tbody tr td button {
+  background-color: #ffc836;
+}
+table tbody tr:hover {
+  background-color: #ffc836;
+  color: #002858;
+}
+table tbody tr:hover div.pill {
+  outline: solid 3px #002858;
+}/*# sourceMappingURL=style.css.map */

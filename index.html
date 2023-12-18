@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Desarrollo de Interfaces Web</title>
+    <meta name="author" content="José Joaquín Boto Díaz">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/app.js"></script>
+</head>
+
+<body>
+
+    <dialog id="deleteDialog">
+        <div>
+            <form method="dialog">
+                <h2>Borrar coche</h2>
+                <p>¿Deseas borrar la entrada seleccionada?</p>
+                <input type="submit" value="Borrar">
+                <input type="button" id="btnKeep" value="Mantener">
+            </form>
+        </div>
+    </dialog>
+
+    <dialog id="insertDialog">
+            <form method="dialog">
+                <h2>Insertar nuevo coche</h2>
+                <div class="divLabelInput">
+                    <label for="inputPlate">Matrícula</label>
+                    <input type="text" id="inputPlate" required>
+                </div>
+                <div class="divLabelInput">
+                    <label for="inputModel">Modelo</label>
+                    <input type="text" id="inputModel" required>
+                </div>
+                <div class="divLabelInput">
+                    <label for="inputClient">Cliente</label>
+                    <input type="text" id="inputClient" required>
+                </div>
+                <div class="divLabelInput">
+                    <label for="inputEnter">Entrada</label>
+                    <input type="date" id="inputEnter" required>
+                </div>
+                <div class="divLabelInput">
+                    <label for="inputExit">Salida</label>
+                    <input type="date" id="inputExit" required>
+                </div>
+                <div class="divLabelInput">
+                    <label for="inputPrizing">Tarifa</label>
+                    <select id="inputPrizing">
+                        <option value="estandar" default>Estándar</option>
+                        <option value="premium">Premium</option>
+                        <option value="oferta">Oferta</option>
+                    </select>
+                </div>
+                <div class="divSubmit">
+                    <input type="submit" value="Insertar">
+                    <input type="button" id="btnCancel" value="Cancelar">
+                </div>
+            </form>
+    </dialog>
+
+
+    <aside>
+        <div id="logoContainer">
+            <img src="https://www.cesurformacion.com/uploads/media/logo-small/09/19-cesur-fp.svg?v=6-0"
+                alt="Logo Cesur">
+        </div>
+        <ul>
+            <li><a href="#">Listado entradas</a></li>
+            <li><a href="#" id="newEntry">Nueva entrada</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Herramientas</a></li>
+            <li>
+                <div id="separator"></div>
+            </li>
+            <li><a href="#">Salir</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h1>Listado de entradas</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Modelo</th>
+                    <th>Cliente</th>
+                    <th>Fecha de entrada</th>
+                    <th>Fecha de salida</th>
+                    <th>Tarifa</th>
+                    <th>Coste total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABC123</td>
+                    <td>Toyota Camry</td>
+                    <td>Juan Pérez</td>
+                    <td>2023-01-05</td>
+                    <td>2023-01-10</td>
+                    <td>
+                        <div class="pill">Estándar</div>
+                    </td>
+                    <td>250€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>XYZ789</td>
+                    <td>Honda Civic</td>
+                    <td>Maria Rodríguez</td>
+                    <td>2023-02-12</td>
+                    <td>2023-02-18</td>
+                    <td>
+                        <div class="pill">Premium</div>
+                    </td>
+                    <td>280€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>DEF456</td>
+                    <td>Ford Mustang</td>
+                    <td>Carlos Gómez</td>
+                    <td>2023-03-20</td>
+                    <td>2023-03-25</td>
+                    <td>
+                        <div class="pill">Oferta</div>
+                    </td>
+                    <td>350€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>GHI789</td>
+                    <td>Chevrolet Malibu</td>
+                    <td>Ana López</td>
+                    <td>2023-04-08</td>
+                    <td>2023-04-15</td>
+                    <td>
+                        <div class="pill">Estándar</div>
+                    </td>
+                    <td>385€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>JKL012</td>
+                    <td>Nissan Altima</td>
+                    <td>Luis García</td>
+                    <td>2023-05-14</td>
+                    <td>2023-05-20</td>
+                    <td>
+                        <div class="pill">Premium</div>
+                    </td>
+                    <td>270€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>MNO345</td>
+                    <td>Hyundai Sonata</td>
+                    <td>Sofía Martinez</td>
+                    <td>2023-06-02</td>
+                    <td>2023-06-08</td>
+                    <td>
+                        <div class="pill">Estándar</div>
+                    </td>
+                    <td>288€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>PQR678</td>
+                    <td>Kia Forte</td>
+                    <td>Pedro Sánchez</td>
+                    <td>2023-07-11</td>
+                    <td>2023-07-18</td>
+                    <td>
+                        <div class="pill">Oferta</div>
+                    </td>
+                    <td>294€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>STU901</td>
+                    <td>Subaru Outback</td>
+                    <td>Marta Torres</td>
+                    <td>2023-08-19</td>
+                    <td>2023-08-25</td>
+                    <td>
+                        <div class="pill">Premium</div>
+                    </td>
+                    <td>360€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>VWX234</td>
+                    <td>Mercedes-Benz C-Class</td>
+                    <td>Ricardo Vargas</td>
+                    <td>2023-09-27</td>
+                    <td>2023-10-03</td>
+                    <td>
+                        <div class="pill">Estándar</div>
+                    </td>
+                    <td>480€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>YZA567</td>
+                    <td>Audi A4</td>
+                    <td>Isabel López</td>
+                    <td>2023-11-05</td>
+                    <td>2023-11-12</td>
+                    <td>
+                        <div class="pill">Oferta</div>
+                    </td>
+                    <td>525€</td>
+                    <td><button class="btnDelete">Borrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        Creado por José Joaquín Boto Díaz para 2DAW
+    </footer>
+</body>
+
+</html>
